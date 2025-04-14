@@ -56,7 +56,7 @@ export default [
     shortcut: "p",
     briefDescription:
       "The padding utilities in Tailwind CSS are used to add space inside an element, between its content and border. Tailwind provides a wide range of spacing values, which can be applied to all sides or individually to the top, right, bottom, or left.",
-    code: "<div class='p-[40px] p-2 px-6 py-[30px]'>Content goes here</div>",
+    code: "<div class='p-[40px] p-2 px-5 py-[30px]'>Content goes here</div>",
     extraInfo: [
       {
         title: "Padding Top",
@@ -108,7 +108,7 @@ export default [
     shortcut: "w",
     briefDescription:
       "The width utility in Tailwind CSS is used to control the horizontal size of an element. It provides a wide range of predefined classes that cover fixed widths, fractional widths, percentage-based widths, screen-relative widths, minimum and maximum constraints, and fully custom values. These classes make it easy to build responsive layouts without writing custom CSS.",
-    code: '<div class="w-[300px] w-1/2 w-full">Content goes here</div>',
+    code: '<div class="w-screen">Content goes here</div>',
     extraInfo: [
       {
         title: "Fixed Width",
@@ -117,13 +117,7 @@ export default [
           "You can set a fixed width using square brackets. Example: `w-[250px]`.",
         code: '<div class="w-[250px]">Fixed width</div>',
       },
-      {
-        title: "Fractional Width",
-        shortcut: "w-1/2",
-        description:
-          "Use fractions like `w-1/2`, `w-1/3`, `w-2/3` to divide the container’s width proportionally.",
-        code: '<div class="w-1/2">Half width</div>',
-      },
+
       {
         title: "Full Width",
         shortcut: "w-full",
@@ -175,7 +169,7 @@ export default [
         shortcut: "border-{color}",
         description:
           "Tailwind supports border colors like `border-red-500`, `border-gray-400`, etc.",
-        code: '<div class="border border-blue-500">Colored border</div>',
+        code: '<div class="border border-blue">Colored border</div>',
       },
       {
         title: "Border Radius",
@@ -191,13 +185,7 @@ export default [
           "Use styles like `border-dashed`, `border-dotted`, or `border-solid`.",
         code: '<div class="border border-dashed">Dashed border</div>',
       },
-      {
-        title: "Border Sides",
-        shortcut: "border-t / border-b / border-l / border-r",
-        description:
-          "You can apply borders to specific sides. Example: `border-t-4` for top border.",
-        code: '<div class="border-t-4 border-t-red-500">Top border</div>',
-      },
+
       {
         title: "Remove Border",
         shortcut: "border-0",
@@ -216,6 +204,32 @@ export default [
       "The display utilities in Tailwind CSS are used to control how an element is displayed in the document layout. These utilities define the behavior of elements — whether they behave like a block, inline element, flex container, grid container, or are hidden entirely.",
     code: '<div class="block md:flex">Responsive layout</div>',
     extraInfo: [
+      {
+        title: "Grid",
+        shortcut: "grid",
+        description: "Use `grid` to enable CSS Grid layout.",
+        code: `<div class="grid grid-cols-3 gap-4 p-4">
+  <div class="bg-blue h-32 flex items-center justify-center">Box 1</div>
+  <div class="bg-blue h-32 flex items-center justify-center">Box 2</div>
+  <div class="bg-blue h-32 flex items-center justify-center">Box 3</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 4</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 5</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 6</div>
+</div>`,
+      },
+      {
+        title: "Flex",
+        shortcut: "flex",
+        description:
+          "Use `flex` to make the container a flexbox. Combine with `justify-*`, `items-*` for alignment.",
+        code: '<div class="flex justify-center items-center">Flex container</div>',
+      },
+      {
+        title: "Hidden",
+        shortcut: "hidden",
+        description: "Use `hidden` to completely hide an element.",
+        code: '<div class="hidden">This will not show</div>',
+      },
       {
         title: "Block",
         shortcut: "block",
@@ -237,13 +251,7 @@ export default [
           "`inline-block` allows the element to flow inline while preserving block styling like width and height.",
         code: '<div class="inline-block">Inline block</div>',
       },
-      {
-        title: "Flex",
-        shortcut: "flex",
-        description:
-          "Use `flex` to make the container a flexbox. Combine with `justify-*`, `items-*` for alignment.",
-        code: '<div class="flex justify-center items-center">Flex container</div>',
-      },
+
       {
         title: "Inline Flex",
         shortcut: "inline-flex",
@@ -251,23 +259,12 @@ export default [
           "Same as `flex` but displayed inline with surrounding content.",
         code: '<div class="inline-flex">Inline flex</div>',
       },
-      {
-        title: "Grid",
-        shortcut: "grid",
-        description: "Use `grid` to enable CSS Grid layout.",
-        code: '<div class="grid grid-cols-3 gap-4">Grid layout</div>',
-      },
+
       {
         title: "Inline Grid",
         shortcut: "inline-grid",
         description: "Like `grid` but displayed inline.",
         code: '<div class="inline-grid">Inline Grid</div>',
-      },
-      {
-        title: "Hidden",
-        shortcut: "hidden",
-        description: "Use `hidden` to completely hide an element.",
-        code: '<div class="hidden">This will not show</div>',
       },
     ],
   },
@@ -279,32 +276,32 @@ export default [
     shortcut: "bg",
     briefDescription:
       "The background utilities in Tailwind CSS allow you to control the background appearance of elements. This includes background color, image, position, size, repeat behavior, attachment, blend mode, origin, clip, and gradient direction. These utilities provide a flexible way to style elements and enhance the visual aesthetics of your design.",
-    code: '<div class="bg-blue-500 p-8">Background color example</div>',
+    code: '<div class="bg-blue p-8">Background color example</div>',
     extraInfo: [
       {
         title: "Background Color",
-        shortcut: "bg-{color}",
+        shortcut: "bg-[color]",
         description:
-          "Use `bg-{color}` to set the background color. Example: `bg-blue-500`, `bg-gray-200`.",
-        code: '<div class="bg-blue-500">Blue background</div>',
+          "Use `bg-[color]` to set the background color. Example: `bg-blue-500`, `bg-gray-200`.",
+        code: '<div class="bg-[cyan] w-screen h-screen">Cyan background</div>',
       },
       {
         title: "Background Image",
-        shortcut: "bg-{image}",
+        shortcut: "bg-[url(your_url)]",
         description:
-          "You can set a background image using `bg-{image}`. Example: `bg-cover` or `bg-center`.",
-        code: '<div class="bg-cover bg-center" style="background-image: url(\'your-image-url.jpg\')">Background image</div>',
+          "You can set a background image using `bg-[url(your_link)]`. Example: `bg-cover` or `bg-center`.",
+        code: `<div class="bg-cover bg-center bg-[url('https://tse3.mm.bing.net/th?id=OIP.Fe8Ph21Hbdb5TIYZmjCK2QHaFj&pid=Api&P=0&h=180')] h-screen w-screen" >Background image</div>`,
       },
       {
         title: "Background Size",
-        shortcut: "bg-{size}",
+        shortcut: "bg-[size]",
         description:
           "Use `bg-cover` or `bg-contain` to control the size of the background image.",
         code: '<div class="bg-cover">Background size cover</div>',
       },
       {
         title: "Background Position",
-        shortcut: "bg-{position}",
+        shortcut: "bg-[position]",
         description:
           "Control the position of the background image with `bg-center`, `bg-top`, `bg-bottom`, etc.",
         code: '<div class="bg-center">Centered background</div>',
@@ -321,14 +318,7 @@ export default [
         shortcut: "bg-fixed",
         description:
           "Control how the background image behaves when scrolling using `bg-fixed`, `bg-local`, or `bg-scroll`.",
-        code: '<div class="bg-fixed">Fixed background</div>',
-      },
-      {
-        title: "Background Gradient",
-        shortcut: "bg-gradient-to-{direction}",
-        description:
-          "Use background gradients with `bg-gradient-to-{direction}`, such as `bg-gradient-to-r`, `bg-gradient-to-b`.",
-        code: '<div class="bg-gradient-to-r from-blue-500 to-green-500">Gradient background</div>',
+        code: '<div class="bg-fixed h-screen w-screen">Fixed background</div>',
       },
     ],
   },
@@ -372,37 +362,37 @@ export default [
       },
       {
         title: "Z-Index",
-        shortcut: "z-{index}",
+        shortcut: "z-[index]",
         description:
-          "Control the stacking order of elements using `z-{index}`. Example: `z-10`.",
+          "Control the stacking order of elements using `z-[index]`. Example: `z-10`.",
         code: '<div class="z-10">Z-index control</div>',
       },
       {
         title: "Top Position",
-        shortcut: "top-{value}",
+        shortcut: "top-[value]",
         description:
-          "Use `top-{value}` to control the vertical position of an element. Example: `top-0`, `top-4`.",
+          "Use `top-[value]` to control the vertical position of an element. Example: `top-0`, `top-4`.",
         code: '<div class="absolute top-4">Top position</div>',
       },
       {
         title: "Right Position",
-        shortcut: "right-{value}",
+        shortcut: "right-[value]",
         description:
-          "Use `right-{value}` to control the horizontal position of an element. Example: `right-0`, `right-4`.",
+          "Use `right-[value]` to control the horizontal position of an element. Example: `right-0`, `right-4`.",
         code: '<div class="absolute right-4">Right position</div>',
       },
       {
         title: "Bottom Position",
-        shortcut: "bottom-{value}",
+        shortcut: "bottom-[value]",
         description:
-          "Use `bottom-{value}` to control the bottom positioning of an element. Example: `bottom-0`, `bottom-4`.",
+          "Use `bottom-[value]` to control the bottom positioning of an element. Example: `bottom-0`, `bottom-4`.",
         code: '<div class="absolute bottom-4">Bottom position</div>',
       },
       {
         title: "Left Position",
-        shortcut: "left-{value}",
+        shortcut: "left-[value]",
         description:
-          "Use `left-{value}` to control the left position of an element. Example: `left-0`, `left-4`.",
+          "Use `left-[value]` to control the left position of an element. Example: `left-0`, `left-4`.",
         code: '<div class="absolute left-4">Left position</div>',
       },
     ],
@@ -415,7 +405,7 @@ export default [
     shortcut: "h",
     briefDescription:
       "The height (h) utilities in Tailwind CSS are used to set the vertical size of an element. These utilities let you control fixed, relative, or dynamic heights using predefined classes or custom values.",
-    code: '<div class="h-[200px] h-1/2 h-full">Content goes here</div>',
+    code: '<div class="h-screen">Content goes here</div>',
     extraInfo: [
       {
         title: "Fixed Height",
@@ -424,13 +414,7 @@ export default [
           "You can set a fixed height using square brackets, for example `h-[300px]`.",
         code: '<div class="h-[300px]">Fixed height</div>',
       },
-      {
-        title: "Fractional Height",
-        shortcut: "h-1/2",
-        description:
-          "Use fractions like `h-1/2`, `h-1/3`, `h-2/3` to divide the container’s height proportionally.",
-        code: '<div class="h-1/2">Half height</div>',
-      },
+
       {
         title: "Full Height",
         shortcut: "h-full",
@@ -475,14 +459,14 @@ export default [
         shortcut: "font-[family]",
         description:
           "You can set the font family using classes like `font-sans`, `font-serif`, or `font-mono`.",
-        code: '<div class="font-serif">Serif Font</div>',
+        code: '<div class="font-fira">Fira Sans Font</div>',
       },
       {
         title: "Font Size",
         shortcut: "text-[size]",
         description:
-          "Set the font size with classes like `text-sm`, `text-base`, `text-lg`, or specific values.",
-        code: '<div class="text-xl">Extra Large Font</div>',
+          "Set the font size with classes like `text-sm`, `text-lg`, or specific values.",
+        code: '<div class="text-lg">Extra Large Font</div>',
       },
       {
         title: "Font Weight",
@@ -490,13 +474,6 @@ export default [
         description:
           "Adjust the font weight with classes like `font-thin`, `font-normal`, `font-semibold`, or `font-bold`.",
         code: '<div class="font-bold">Bold Font</div>',
-      },
-      {
-        title: "Font Style",
-        shortcut: "italic / not-italic",
-        description:
-          "Use `italic` to make the text italicized and `not-italic` to remove italicization.",
-        code: '<div class="italic">Italic Text</div>',
       },
       {
         title: "Text Transform",
@@ -510,14 +487,14 @@ export default [
         shortcut: "tracking-[value]",
         description:
           "Control the letter spacing with classes like `tracking-tight`, `tracking-normal`, or `tracking-wide`.",
-        code: '<div class="tracking-wide">Wide Letter Spacing</div>',
+        code: '<div class="tracking-widest">Wide Letter Spacing</div>',
       },
       {
         title: "Line Height",
         shortcut: "leading-[value]",
         description:
-          "Set the line height using classes like `leading-tight`, `leading-snug`, or specific values.",
-        code: '<div class="leading-relaxed">Relaxed Line Height</div>',
+          "Set the line height using classes like `leading-tight`,`leading-loose` or `leading-normal`.",
+        code: '<div class="leading-loose">Relaxed Line Height</div>',
       },
     ],
   },
@@ -614,20 +591,6 @@ export default [
           "Use `flex-grow` to allow an item to grow and take up available space in the container.",
         code: '<div class="flex"><div class="flex-grow">Flex Grow Item</div></div>',
       },
-      {
-        title: "Flex Shrink",
-        shortcut: "flex-shrink",
-        description:
-          "Use `flex-shrink` to allow an item to shrink when there is not enough space.",
-        code: '<div class="flex"><div class="flex-shrink">Flex Shrink Item</div></div>',
-      },
-      {
-        title: "Flex Basis",
-        shortcut: "flex-[value]",
-        description:
-          "Use `flex-[value]` to set the initial size of a flex item before any available space is distributed.",
-        code: '<div class="flex"><div class="flex-[200px]">Fixed Basis Item</div></div>',
-      },
     ],
   },
   {
@@ -638,56 +601,36 @@ export default [
     shortcut: "text / bg",
     briefDescription:
       "Color properties in Tailwind CSS offer a highly flexible and customizable way to style elements with predefined utility classes for background colors, text colors, borders, and more. Tailwind’s color system is easy to use, and it includes a wide range of color utilities that allow you to adjust various aspects of your design, all without writing custom CSS.",
-    code: '<div class="text-red-500">Text Color</div>',
+    code: '<div class="text-red">Text Color</div>',
     extraInfo: [
       {
         title: "Text Color",
         shortcut: "text-[color]",
         description:
           "Use `text-[color]` to set the color of the text. You can use predefined colors like `red-500` or custom colors with hex, RGB, or other formats.",
-        code: '<div class="text-blue-500">Blue Text</div>',
+        code: '<div class="text-blue">Blue Text</div>',
       },
-      {
-        title: "Background Color",
-        shortcut: "bg-[color]",
-        description:
-          "Use `bg-[color]` to set the background color of an element. Colors like `bg-red-500` or custom color codes can be used.",
-        code: '<div class="bg-green-500">Green Background</div>',
-      },
+
       {
         title: "Hover Text Color",
         shortcut: "hover:text-[color]",
         description:
           "Use `hover:text-[color]` to change the text color on hover.",
-        code: '<div class="hover:text-yellow-500">Hover to Change Text Color</div>',
+        code: '<div class="hover:text-[yellow]">Hover to Change Text Color</div>',
       },
       {
         title: "Hover Background Color",
         shortcut: "hover:bg-[color]",
         description:
           "Use `hover:bg-[color]` to change the background color on hover.",
-        code: '<div class="hover:bg-purple-500">Hover to Change Background Color</div>',
+        code: '<div class="hover:bg-[purple]">Hover to Change Background Color</div>',
       },
       {
         title: "Border Color",
         shortcut: "border-[color]",
         description:
           "Use `border-[color]` to set the border color of an element.",
-        code: '<div class="border-2 border-gray-500">Gray Border</div>',
-      },
-      {
-        title: "Focus Text Color",
-        shortcut: "focus:text-[color]",
-        description:
-          "Use `focus:text-[color]` to change the text color when the element is focused.",
-        code: '<input class="focus:text-green-500" />',
-      },
-      {
-        title: "Focus Background Color",
-        shortcut: "focus:bg-[color]",
-        description:
-          "Use `focus:bg-[color]` to change the background color when the element is focused.",
-        code: '<input class="focus:bg-blue-500" />',
+        code: '<div class="border-2 border-red>Gray Border</div>',
       },
     ],
   },
@@ -720,40 +663,6 @@ export default [
         description:
           "Use `shadow-lg` for a larger, more prominent shadow effect.",
         code: '<div class="shadow-lg">Large Shadow</div>',
-      },
-      {
-        title: "Extra Large Shadow",
-        shortcut: "shadow-xl",
-        description:
-          "Use `shadow-xl` for an extra large and deep shadow effect.",
-        code: '<div class="shadow-xl">Extra Large Shadow</div>',
-      },
-      {
-        title: "2x Extra Large Shadow",
-        shortcut: "shadow-2xl",
-        description: "Use `shadow-2xl` for an even deeper shadow effect.",
-        code: '<div class="shadow-2xl">2x Extra Large Shadow</div>',
-      },
-      {
-        title: "No Shadow",
-        shortcut: "shadow-none",
-        description:
-          "Use `shadow-none` to remove any shadow effects from an element.",
-        code: '<div class="shadow-none">No Shadow</div>',
-      },
-      {
-        title: "Inset Shadow",
-        shortcut: "shadow-inner",
-        description:
-          "Use `shadow-inner` to apply an inset shadow, making the shadow appear inside the element.",
-        code: '<div class="shadow-inner">Inset Shadow</div>',
-      },
-      {
-        title: "Custom Shadow",
-        shortcut: "shadow-[value]",
-        description:
-          "You can create custom shadow effects using arbitrary values, such as `shadow-[0px_10px_15px_rgba(0,0,0,0.3)]`.",
-        code: '<div class="shadow-[0px_10px_15px_rgba(0,0,0,0.3)]">Custom Shadow</div>',
       },
     ],
   },
@@ -798,13 +707,6 @@ export default [
         description:
           "Use `opacity-0` to make the element fully transparent (0% opacity).",
         code: '<div class="opacity-0">Fully Transparent</div>',
-      },
-      {
-        title: "Custom Opacity",
-        shortcut: "opacity-[value]",
-        description:
-          "You can create custom opacity values using arbitrary values, such as `opacity-[0.6]`.",
-        code: '<div class="opacity-[0.6]">Custom 60% Opacity</div>',
       },
     ],
   },
@@ -863,7 +765,7 @@ export default [
     shortcut: "z",
     briefDescription: `The z-index property in CSS is used to control the stacking order of elements on the page. It determines which elements appear in front or behind other elements. An element with a higher z-index will be displayed in front of elements with lower z-index values. If two elements have the same z-index, the one declared last in the HTML (or CSS) will be displayed in front.Tailwind CSS provides several utility classes to manage the z-index of elements, making it easy to manipulate the stacking context without writing custom CSS.
     `,
-    code: '<div class="z-10">Content with z-index 10</div>',
+    code: '<div class="z-5">Content with z-index 5</div>',
     extraInfo: [
       {
         title: "Z-Index 0",
@@ -873,156 +775,15 @@ export default [
         code: '<div class="z-0">Content with z-index 0</div>',
       },
       {
-        title: "Z-Index 10",
-        shortcut: "z-10",
+        title: "Z-Index 5",
+        shortcut: "z-5",
         description:
-          "Use `z-10` to set the z-index to 10, placing the element above elements with a z-index of 0.",
-        code: '<div class="z-10">Content with z-index 10</div>',
-      },
-      {
-        title: "Z-Index 20",
-        shortcut: "z-20",
-        description:
-          "Use `z-20` to set the z-index to 20, placing the element above elements with a lower z-index.",
-        code: '<div class="z-20">Content with z-index 20</div>',
-      },
-      {
-        title: "Negative Z-Index",
-        shortcut: "z-negative",
-        description:
-          "You can use negative z-index values like `z-[-10]` to position elements behind others.",
-        code: '<div class="z-[-10]">Content with negative z-index</div>',
-      },
-      {
-        title: "Auto Z-Index",
-        shortcut: "z-auto",
-        description:
-          "Use `z-auto` to let the browser decide the stacking order of elements based on their position in the DOM.",
-        code: '<div class="z-auto">Content with auto z-index</div>',
+          "Use `z-5` to set the z-index to 5, placing the element above elements with a z-index of 0.",
+        code: '<div class="z-5">Content with z-index 5</div>',
       },
     ],
   },
-  {
-    _id: 17,
-    title: "Transition",
-    description:
-      "The `transition` properties in Tailwind CSS control the animation of changes to properties like color, opacity, transform, and more. You can specify which properties to animate and the duration of the animation.",
-    shortcut: "transition",
-    briefDescription:
-      "The transition property in CSS allows you to change property values smoothly (over a given duration), rather than having them jump to their new values. Transitions are often used to animate elements in response to user interactions, such as hovering over a button or changing the background color of a div when it gets focus. In Tailwind CSS, transition utilities enable you to easily create animations and transitions for various CSS properties without writing custom CSS. You can control which properties to transition, the duration, the timing function, and the delay.",
-    code: '<div class="transition duration-300 ease-in-out">Hover over me</div>',
-    extraInfo: [
-      {
-        title: "Transition All Properties",
-        shortcut: "transition-all",
-        description:
-          "Use `transition-all` to animate all properties that can change, such as background color, opacity, etc.",
-        code: '<div class="transition-all duration-300 ease-in-out">Hover for transition</div>',
-      },
-      {
-        title: "Transition Color",
-        shortcut: "transition-colors",
-        description:
-          "Use `transition-colors` to animate color changes like background-color or text color.",
-        code: '<div class="transition-colors duration-300 ease-in-out hover:bg-blue-500">Hover to change color</div>',
-      },
-      {
-        title: "Transition Opacity",
-        shortcut: "transition-opacity",
-        description: "Use `transition-opacity` to animate opacity changes.",
-        code: '<div class="transition-opacity duration-300 ease-in-out hover:opacity-50">Hover to change opacity</div>',
-      },
-      {
-        title: "Transition Transform",
-        shortcut: "transition-transform",
-        description:
-          "Use `transition-transform` to animate transformations like scale, rotate, or translate.",
-        code: '<div class="transition-transform duration-300 ease-in-out transform hover:scale-110">Hover to scale</div>',
-      },
-      {
-        title: "Transition Duration",
-        shortcut: "duration-[value]",
-        description:
-          "Use `duration-[value]` to set the duration of the transition. You can specify values like `duration-150`, `duration-300`, or custom values.",
-        code: '<div class="transition duration-500 ease-in-out">Hover for custom duration</div>',
-      },
-      {
-        title: "Transition Timing Function",
-        shortcut: "ease-[timing-function]",
-        description:
-          "Use `ease-[timing-function]` to specify the timing function of the transition, such as `ease-in`, `ease-out`, or `ease-in-out`.",
-        code: '<div class="transition duration-300 ease-in-out">Hover for timing function</div>',
-      },
-      {
-        title: "No Transition",
-        shortcut: "transition-none",
-        description:
-          "Use `transition-none` to disable transitions for specific properties.",
-        code: '<div class="transition-none">No transition</div>',
-      },
-    ],
-  },
-  {
-    _id: 18,
-    title: "Transform",
-    description:
-      "The `transform` property in Tailwind CSS is used to apply 2D and 3D transformations to elements, such as scaling, rotating, translating, and skewing. You can use it to alter the shape and position of elements on the page.",
-    shortcut: "transform",
-    briefDescription:
-      "The transform property in CSS allows you to apply various transformations to an element, such as rotating, scaling, translating, or skewing. This is a powerful tool for creating dynamic effects, animations, and interactive user interfaces. In Tailwind CSS, the transform utility makes it easy to apply transformations without writing custom CSS, and it provides various utilities to control how an element should be transformed.Transform Utilities in Tailwind CSS. Tailwind CSS provides utilities to apply specific transformations, including scaling, rotating, translating, and skewing elements. You can also control when and how transformations should occur using hover, focus, or active states.",
-    code: '<div class="transform scale-110 rotate-45">Transformed Element</div>',
-    extraInfo: [
-      {
-        title: "Scale",
-        shortcut: "scale-[value]",
-        description:
-          "Use `scale-[value]` to scale the element by a specific factor. For example, `scale-110` scales it to 110% of its original size.",
-        code: '<div class="transform scale-110">Scaled Element</div>',
-      },
-      {
-        title: "Rotate",
-        shortcut: "rotate-[value]",
-        description:
-          "Use `rotate-[value]` to rotate the element by a specific degree. For example, `rotate-45` rotates it 45 degrees clockwise.",
-        code: '<div class="transform rotate-45">Rotated Element</div>',
-      },
-      {
-        title: "Translate",
-        shortcut: "translate-x-[value] / translate-y-[value]",
-        description:
-          "Use `translate-x-[value]` and `translate-y-[value]` to move the element along the X and Y axes respectively. For example, `translate-x-10` moves the element 10 units to the right.",
-        code: '<div class="transform translate-x-10">Translated Element</div>',
-      },
-      {
-        title: "Skew",
-        shortcut: "skew-x-[value] / skew-y-[value]",
-        description:
-          "Use `skew-x-[value]` and `skew-y-[value]` to skew the element along the X and Y axes respectively. For example, `skew-x-12` skews the element by 12 degrees along the X-axis.",
-        code: '<div class="transform skew-x-12">Skewed Element</div>',
-      },
-      {
-        title: "3D Transforms",
-        shortcut: "rotate-x-[value] / rotate-y-[value] / rotate-z-[value]",
-        description:
-          "Use 3D rotation functions like `rotate-x-[value]`, `rotate-y-[value]`, and `rotate-z-[value]` to rotate an element in 3D space.",
-        code: '<div class="transform rotate-x-45">3D Rotated Element</div>',
-      },
-      {
-        title: "Multiple Transformations",
-        shortcut: "transform",
-        description:
-          "You can apply multiple transformations by chaining them together. For example, `scale-110 rotate-45` will scale and rotate an element simultaneously.",
-        code: '<div class="transform scale-110 rotate-45">Multiple Transforms</div>',
-      },
-      {
-        title: "No Transform",
-        shortcut: "transform-none",
-        description:
-          "Use `transform-none` to reset the transform property, removing any transformations applied.",
-        code: '<div class="transform-none">No Transform</div>',
-      },
-    ],
-  },
+
   {
     _id: 19,
     title: "Visibility",
@@ -1042,10 +803,10 @@ export default [
       },
       {
         title: "Hidden",
-        shortcut: "invisible",
+        shortcut: "hidden",
         description:
-          "Use `invisible` to make the element hidden. The element will still take up space in the layout but will not be visible.",
-        code: '<div class="invisible">This element is hidden</div>',
+          "Use `hidden` to make the element hidden. The element will still take up space in the layout but will not be visible.",
+        code: '<div class="hidden">This element is hidden</div>',
       },
     ],
   },
@@ -1066,24 +827,7 @@ export default [
       </div>
     </div>
     `,
-    extraInfo: [
-      {
-        title: "Card with Image",
-        shortcut: "img + card",
-        description:
-          "Use `img` tag at the top followed by content inside a rounded box.",
-        code: `
-  <div class="rounded overflow-hidden shadow-lg bg-white">
-    <img src="https://via.placeholder.com/400x200" alt="Card Image" />
-    <div class="p-4">
-      <h2 class="font-bold text-lg">Title</h2>
-      <p class="text-gray-600">Card content goes here</p>
-    </div>
-  </div>
-        `,
-      },
-   
-    ],
+    extraInfo: [],
   },
   {
     _id: 21,
@@ -1141,7 +885,7 @@ export default [
     extraInfo: [
       {
         title: "Tight Letter Spacing",
-        shortcut: "tracking-tighter / tracking-tight",
+        shortcut: " tracking-tight",
         description:
           "Use `tracking-tighter` or `tracking-tight` to reduce space between letters.",
         code: '<div class="tracking-tight">Tight spacing</div>',
@@ -1154,11 +898,18 @@ export default [
         code: '<div class="tracking-normal">Normal spacing</div>',
       },
       {
+        title: "Custom Letter Spacing",
+        shortcut: "tracking-[value]",
+        description:
+          "Use `tracking-[value]` to apply the custom spacing between letters.",
+        code: '<div class="tracking-[5px]">5px spacing</div>',
+      },
+      {
         title: "Wide Letter Spacing",
-        shortcut: "tracking-wide / tracking-wider / tracking-widest",
+        shortcut: "tracking-widest",
         description:
           "Use these classes to increase space between characters gradually.",
-        code: '<div class="tracking-wider">Wider spacing</div>',
+        code: '<div class="tracking-widest">Wider spacing</div>',
       },
     ],
   },
@@ -1185,24 +936,14 @@ export default [
         description: "Sets the line height to 1.25 for tight spacing.",
         code: '<p class="leading-tight">Tightly spaced lines</p>',
       },
-      {
-        title: "Snug",
-        shortcut: "leading-snug",
-        description: "Sets the line height to 1.375 for a snug appearance.",
-        code: '<p class="leading-snug">Snug lines</p>',
-      },
+
       {
         title: "Normal",
         shortcut: "leading-normal",
         description: "Applies the default line height (1.5).",
         code: '<p class="leading-normal">Normal line height</p>',
       },
-      {
-        title: "Relaxed",
-        shortcut: "leading-relaxed",
-        description: "Sets the line height to 1.625 for a more relaxed look.",
-        code: '<p class="leading-relaxed">Relaxed spacing</p>',
-      },
+
       {
         title: "Loose",
         shortcut: "leading-loose",
@@ -1254,20 +995,6 @@ export default [
         description:
           "Use `cursor-wait` to show a loading or waiting indicator.",
         code: '<div class="cursor-wait">Loading...</div>',
-      },
-      {
-        title: "Text Cursor",
-        shortcut: "cursor-text",
-        description:
-          "Use `cursor-text` to indicate that the text can be selected.",
-        code: '<p class="cursor-text">Select this text</p>',
-      },
-      {
-        title: "Custom Cursor",
-        shortcut: "cursor-[url] or cursor-[type]",
-        description:
-          "You can use custom cursors with square bracket notation or specify other types like `cursor-crosshair`, `cursor-move`, etc.",
-        code: '<div class="cursor-crosshair">Crosshair cursor</div>',
       },
     ],
   },
@@ -1321,9 +1048,11 @@ export default [
         shortcut: "bg-red-500",
         description: "Use a red background for error notifications.",
         code: `
-  <div class="fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded shadow-lg">
-    Error! Something went wrong.
-  </div>`,
+  <button class="py-[5px] px-[15px] bg-red text-white" onClick={()=>{toast({
+  type:"error",
+  message:"Error",
+  duration:5000
+  })}}>Error</button>`,
       },
       {
         title: "Warning Toast",
