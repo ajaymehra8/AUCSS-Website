@@ -14,7 +14,7 @@ console.log(s);
   console.log(currentStyle);
   console.log(id);
   return (
-    <div className="w-full h-screen">
+    <div className="w-full min-h-screen">
       <Navbar />
       <MainSection details={currentStyle} />
       <Footer />
