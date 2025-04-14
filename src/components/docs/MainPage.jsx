@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Tag, X, BookOpen } from "lucide-react"; // ✅ Add this line
-import SnippetCard from "./StyleCard";
+import SnippetCard from "../HeroSection/StyleCard";
 import allStyles from "../../assets/info";
-function HeroSection() {
+function MainPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("");
   const [showStyles, setShowStyles] = useState([]);
   const [loadCount, setLoadCount] = useState(1);
-  const [loading,setLoading]=useState(false);
-  let filteredStyles = allStyles?.filter((style) => {
+  let filteredStyles = allStyles?.filter((snippet) => {
     const matchesSearch =
-      style?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      style?.description?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      style?.briefDescription
-        ?.toLowerCase()
-        .includes(searchQuery.toLowerCase());
-    style?.shortcut?.toLowerCase().includes(searchQuery.toLowerCase());
+      snippet?.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      snippet?.language?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      snippet?.user?.name?.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesLanguage =
       !selectedStyle ||
-      style.title.toLowerCase() === selectedStyle.toLowerCase();
+      snippet.title.toLowerCase() === selectedStyle.toLowerCase();
 
     return matchesSearch && matchesLanguage;
   });
@@ -29,48 +25,15 @@ function HeroSection() {
     setLoadCount((prevCount) => prevCount + 1);
   };
   useEffect(() => {
-    setLoading(true);
     const temp = filteredStyles.slice(0, 6 * loadCount);
     setShowStyles(temp);
-    setLoading(false);
   }, [searchQuery, selectedStyle, loadCount]);
+
   const popularStyles = ["Padding", "Margin", "Width", "Height"];
 
   return (
     <div className="min-h-screen bg-[#0a0a0f]">
       <div className="relative max-w-7xl mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r
-              from-blue-500/10 to-purple-500/10 text-sm text-gray-400 mb-6"
-          >
-            <BookOpen className="w-4 h-4" />
-            AU CSS Library
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-100 to-gray-300 text-transparent bg-clip-text mb-6"
-          >
-            Discover & Share Reusable CSS Utilities
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-gray-400 mb-8"
-          >
-            Explore ready-to-use CSS utilities crafted to streamline your
-            workflow.{" "}
-          </motion.p>
-        </div>
-
         {/* Filters Section */}
         <div className="relative max-w-5xl mx-auto mb-12 space-y-6">
           {/* Search */}
@@ -129,10 +92,10 @@ function HeroSection() {
         </div>
 
         {/* Style Card Grid */}
-           
+    
         <div
   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full"
- 
+  layout
 >
   <AnimatePresence>
   {showStyles.length > 0 ? (
@@ -146,24 +109,25 @@ function HeroSection() {
   )}
   </AnimatePresence>
 </div>
-{/* Load More Button */}
 
+{/* Load More Button*/}
 {showStyles.length > 0 && showStyles.length < filteredStyles.length && (
-  <div className="flex justify-center pt-8 w-full">
+  <div className="flex justify-center mt-8 w-full">
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className="cursor-pointer px-6 py-2 rounded-xl bg-blue-600 text-white text-sm font-medium shadow-md hover:bg-blue-700 transition-all duration-200 tracking-wider"
       onClick={loadMore}
     >
-{    !loading?"Load More":"Loading..."
-}    </motion.button>
+      Load More
+    </motion.button>
   </div>
 )}
 
+       
       </div>
     </div>
   );
 }
 
-export default HeroSection;
+export default MainPage;
