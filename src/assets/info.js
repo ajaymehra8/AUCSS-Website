@@ -1,5 +1,145 @@
 export default [
   {
+    _id: 5,
+    title: "Display",
+    description:
+      "The `display` property in Tailwind allows you to control the layout behavior of an element. It can make an element behave like block, inline, flex, grid, etc.",
+    shortcut: "display",
+    briefDescription:
+      "The display utilities in Tailwind CSS are used to control how an element is displayed in the document layout. These utilities define the behavior of elements — whether they behave like a block, inline element, flex container, grid container, or are hidden entirely.",
+    code: '<div class="block md:flex">Responsive layout</div>',
+    extraInfo: [
+      {
+        title: "Grid",
+        shortcut: "grid",
+        description: "Use `grid` to enable CSS Grid layout.",
+        code: `<div class="grid grid-cols-3 gap-4 p-4">
+  <div class="bg-blue h-32 flex items-center justify-center">Box 1</div>
+  <div class="bg-blue h-32 flex items-center justify-center">Box 2</div>
+  <div class="bg-blue h-32 flex items-center justify-center">Box 3</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 4</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 5</div>
+  <div class="bg-green h-32 flex items-center justify-center">Box 6</div>
+</div>`,
+      },
+      {
+        title: "Flex",
+        shortcut: "flex",
+        description:
+          "Use `flex` to make the container a flexbox. Combine with `justify-*`, `items-*` for alignment.",
+        code: '<div class="flex justify-center items-center">Flex container</div>',
+      },
+      {
+        title: "Hidden",
+        shortcut: "hidden",
+        description: "Use `hidden` to completely hide an element.",
+        code: '<div class="hidden">This will not show</div>',
+      },
+      {
+        title: "Block",
+        shortcut: "block",
+        description:
+          "The `block` class makes the element behave like a block-level element.",
+        code: '<div class="block">Block element</div>',
+      },
+      {
+        title: "Inline",
+        shortcut: "inline",
+        description:
+          "Use `inline` to make the element behave like an inline element.",
+        code: '<span class="inline">Inline element</span>',
+      },
+      {
+        title: "Inline Block",
+        shortcut: "inline-block",
+        description:
+          "`inline-block` allows the element to flow inline while preserving block styling like width and height.",
+        code: '<div class="inline-block">Inline block</div>',
+      },
+
+      {
+        title: "Inline Flex",
+        shortcut: "inline-flex",
+        description:
+          "Same as `flex` but displayed inline with surrounding content.",
+        code: '<div class="inline-flex">Inline flex</div>',
+      },
+
+      {
+        title: "Inline Grid",
+        shortcut: "inline-grid",
+        description: "Like `grid` but displayed inline.",
+        code: '<div class="inline-grid">Inline Grid</div>',
+      },
+    ],
+  },
+  {
+    _id: 20,
+    title: "Card",
+    description:
+      "Cards are flexible content containers used for displaying grouped content. Tailwind doesn't have built-in cards like Bootstrap, but you can create them easily using utilities for padding, border, shadow, and rounded corners.",
+    shortcut: "card",
+    briefDescription:
+      "A card is a flexible and extensible content container in web design, often used to display information in a visually appealing and organized manner. Cards can contain images, text, buttons, or any other elements that are grouped together in a section. Tailwind CSS makes it easy to create cards with utility classes for layout, spacing, background, borders, shadows, and responsiveness.",
+    code: `
+  <div class="card card-hover w-[300px] m-3">
+      <img src="https://images.pexels.com/photos/669502/pexels-photo-669502.jpeg?cs=srgb&dl=pexels-goumbik-669502.jpg&fm=jpg" alt="Card Image" class="card-image">
+      <div class="card-body p-3">
+        <h2 class="text-[20px] m-2">Card Title</h2>
+        <p class="text-[14px] text-[#444]">This card has an image as well!</p>
+      </div>
+    </div>
+    `,
+    extraInfo: [],
+  },
+  {
+    _id: 3,
+    title: "Width",
+    description: `Width controls how wide an element appears, and have max-w , min-w ,w-1, w-2,....,w-5 and
+    also have arbitary values w-[value]`,
+    shortcut: "w",
+    briefDescription:
+      "The width utility in Tailwind CSS is used to control the horizontal size of an element. It provides a wide range of predefined classes that cover fixed widths, fractional widths, percentage-based widths, screen-relative widths, minimum and maximum constraints, and fully custom values. These classes make it easy to build responsive layouts without writing custom CSS.",
+    code: '<div class="w-screen">Content goes here</div>',
+    extraInfo: [
+      {
+        title: "Fixed Width",
+        shortcut: "w-[value]",
+        description:
+          "You can set a fixed width using square brackets. Example: `w-[250px]`.",
+        code: '<div class="w-[250px]">Fixed width</div>',
+      },
+
+      {
+        title: "Full Width",
+        shortcut: "w-full",
+        description:
+          "Use `w-full` to make the element span the entire width of its parent.",
+        code: '<div class="w-full">Full width</div>',
+      },
+      {
+        title: "Viewport Width",
+        shortcut: "w-[vw]",
+        description:
+          "Use `w-[25vw]` or other viewport-based values to size elements relative to the screen width.",
+        code: '<div class="w-[25vw]">25% of viewport width</div>',
+      },
+      {
+        title: "Auto Width",
+        shortcut: "w-auto",
+        description: "`w-auto` sets the width based on the content size.",
+        code: '<div class="w-auto">Auto width</div>',
+      },
+      {
+        title: "Min and Max Width",
+        shortcut: "min-w / max-w",
+        description:
+          "You can control minimum or maximum width using `min-w-[value]` or `max-w-[value]`.",
+        code: '<div class="min-w-[150px] max-w-[500px]">Width range</div>',
+      },
+    ],
+  },
+  {
     _id: 1,
     title: "Margin",
     description: "Margin is used to add space outside the element.",
@@ -101,52 +241,7 @@ export default [
       },
     ],
   },
-  {
-    _id: 3,
-    title: "Width",
-    description: "Width controls how wide an element appears.",
-    shortcut: "w",
-    briefDescription:
-      "The width utility in Tailwind CSS is used to control the horizontal size of an element. It provides a wide range of predefined classes that cover fixed widths, fractional widths, percentage-based widths, screen-relative widths, minimum and maximum constraints, and fully custom values. These classes make it easy to build responsive layouts without writing custom CSS.",
-    code: '<div class="w-screen">Content goes here</div>',
-    extraInfo: [
-      {
-        title: "Fixed Width",
-        shortcut: "w-[value]",
-        description:
-          "You can set a fixed width using square brackets. Example: `w-[250px]`.",
-        code: '<div class="w-[250px]">Fixed width</div>',
-      },
 
-      {
-        title: "Full Width",
-        shortcut: "w-full",
-        description:
-          "Use `w-full` to make the element span the entire width of its parent.",
-        code: '<div class="w-full">Full width</div>',
-      },
-      {
-        title: "Viewport Width",
-        shortcut: "w-[vw]",
-        description:
-          "Use `w-[25vw]` or other viewport-based values to size elements relative to the screen width.",
-        code: '<div class="w-[25vw]">25% of viewport width</div>',
-      },
-      {
-        title: "Auto Width",
-        shortcut: "w-auto",
-        description: "`w-auto` sets the width based on the content size.",
-        code: '<div class="w-auto">Auto width</div>',
-      },
-      {
-        title: "Min and Max Width",
-        shortcut: "min-w / max-w",
-        description:
-          "You can control minimum or maximum width using `min-w-[value]` or `max-w-[value]`.",
-        code: '<div class="min-w-[150px] max-w-[500px]">Width range</div>',
-      },
-    ],
-  },
   {
     _id: 4,
     title: "Border",
@@ -194,80 +289,7 @@ export default [
       },
     ],
   },
-  {
-    _id: 5,
-    title: "Display",
-    description:
-      "The `display` property in Tailwind allows you to control the layout behavior of an element. It can make an element behave like block, inline, flex, grid, etc.",
-    shortcut: "display",
-    briefDescription:
-      "The display utilities in Tailwind CSS are used to control how an element is displayed in the document layout. These utilities define the behavior of elements — whether they behave like a block, inline element, flex container, grid container, or are hidden entirely.",
-    code: '<div class="block md:flex">Responsive layout</div>',
-    extraInfo: [
-      {
-        title: "Grid",
-        shortcut: "grid",
-        description: "Use `grid` to enable CSS Grid layout.",
-        code: `<div class="grid grid-cols-3 gap-4 p-4">
-  <div class="bg-blue h-32 flex items-center justify-center">Box 1</div>
-  <div class="bg-blue h-32 flex items-center justify-center">Box 2</div>
-  <div class="bg-blue h-32 flex items-center justify-center">Box 3</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 4</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 5</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 6</div>
-</div>`,
-      },
-      {
-        title: "Flex",
-        shortcut: "flex",
-        description:
-          "Use `flex` to make the container a flexbox. Combine with `justify-*`, `items-*` for alignment.",
-        code: '<div class="flex justify-center items-center">Flex container</div>',
-      },
-      {
-        title: "Hidden",
-        shortcut: "hidden",
-        description: "Use `hidden` to completely hide an element.",
-        code: '<div class="hidden">This will not show</div>',
-      },
-      {
-        title: "Block",
-        shortcut: "block",
-        description:
-          "The `block` class makes the element behave like a block-level element.",
-        code: '<div class="block">Block element</div>',
-      },
-      {
-        title: "Inline",
-        shortcut: "inline",
-        description:
-          "Use `inline` to make the element behave like an inline element.",
-        code: '<span class="inline">Inline element</span>',
-      },
-      {
-        title: "Inline Block",
-        shortcut: "inline-block",
-        description:
-          "`inline-block` allows the element to flow inline while preserving block styling like width and height.",
-        code: '<div class="inline-block">Inline block</div>',
-      },
 
-      {
-        title: "Inline Flex",
-        shortcut: "inline-flex",
-        description:
-          "Same as `flex` but displayed inline with surrounding content.",
-        code: '<div class="inline-flex">Inline flex</div>',
-      },
-
-      {
-        title: "Inline Grid",
-        shortcut: "inline-grid",
-        description: "Like `grid` but displayed inline.",
-        code: '<div class="inline-grid">Inline Grid</div>',
-      },
-    ],
-  },
   {
     _id: 6,
     title: "Background",
@@ -810,25 +832,7 @@ export default [
       },
     ],
   },
-  {
-    _id: 20,
-    title: "Card",
-    description:
-      "Cards are flexible content containers used for displaying grouped content. Tailwind doesn't have built-in cards like Bootstrap, but you can create them easily using utilities for padding, border, shadow, and rounded corners.",
-    shortcut: "card",
-    briefDescription:
-      "A card is a flexible and extensible content container in web design, often used to display information in a visually appealing and organized manner. Cards can contain images, text, buttons, or any other elements that are grouped together in a section. Tailwind CSS makes it easy to create cards with utility classes for layout, spacing, background, borders, shadows, and responsiveness.",
-    code: `
-  <div class="card card-hover w-[300px] m-3">
-      <img src="https://images.pexels.com/photos/669502/pexels-photo-669502.jpeg?cs=srgb&dl=pexels-goumbik-669502.jpg&fm=jpg" alt="Card Image" class="card-image">
-      <div class="card-body p-3">
-        <h2 class="text-[20px] m-2">Card Title</h2>
-        <p class="text-[14px] text-[#444]">This card has an image as well!</p>
-      </div>
-    </div>
-    `,
-    extraInfo: [],
-  },
+
   {
     _id: 21,
     title: "Hover",

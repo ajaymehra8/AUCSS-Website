@@ -23,7 +23,7 @@ function Navbar() {
                 <Blocks className="w-6 h-6 text-blue-400 transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
               </div>
 
-              <div className="relative">
+              <div className="relative sm:grid hidden">
                 <span
                   className="block text-lg font-semibold bg-gradient-to-r
                  from-blue-400 via-blue-300 to-purple-400 text-transparent bg-clip-text"
@@ -71,7 +71,7 @@ function Navbar() {
           <div className="flex items-center gap-4">
               <a
                 href="https://github.com/ajaymehra8/AUCSS"
-                className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20
+                className="sm:flex hidden items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20
                  hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 
                 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 transition-all 
                 duration-300"
