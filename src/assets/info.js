@@ -1044,7 +1044,7 @@ export default [
   </div>`,
     extraInfo: [
       {
-        title: "Error Toast",
+        title: "Error Toaster",
         shortcut: "bg-red-500",
         description: "Use a red background for error notifications.",
         code: `
