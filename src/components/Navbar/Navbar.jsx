@@ -1,4 +1,4 @@
-import { Blocks, Code2, Sparkles } from "lucide-react";
+import { Blocks, Code2, Sparkles, Zap } from "lucide-react";
 import React from "react";
 import { BiMoon } from "react-icons/bi";
 import { FaGithubAlt } from "react-icons/fa";
@@ -36,7 +36,21 @@ function Navbar() {
                 </span>
               </div>
             </Link>
-
+            {/* setup link */}
+            <Link
+              to="/setup"
+              className="relative group flex items-center gap-2 px-4 py-1.5 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 
+              border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
+            >
+              <div
+                className="absolute inset-0 bg-gradient-to-r from-blue-500/10 
+              to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"
+              />
+              <Zap className="w-4 h-4 relative z-10 group-hover:rotate-3 transition-transform" />
+              <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors">
+                Quick setup
+              </span>
+            </Link>
             {/* docs Link */}
             <Link
               to="/docs"
@@ -57,11 +71,12 @@ function Navbar() {
           {/* right rection */}
           <div className="flex items-center gap-4">
               <a
-                href="/pricing"
+                href="https://github.com/ajaymehra8/AUCSS"
                 className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20
                  hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 
                 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 transition-all 
                 duration-300"
+                target="_blank"
               >
                 <Sparkles className="w-4 h-4 text-amber-400 hover:text-amber-300" />
                 <span className="text-sm font-medium text-amber-400/90 hover:text-amber-300">

@@ -1,0 +1,108 @@
+{
+    "name": "AU-CSS",
+    "description": "A lightweight utility-first CSS framework inspired by Tailwind — designed to give you common utilities and support for arbitrary values like `p-[20px]` or `w-[100%]`.",
+    
+    "installation": {
+      "cdn": {
+        "heading":"Using via CDN",
+        "css": "https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css",
+        "js": "https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js",
+        "example": "<div class=\"bg-red text-white p-[40px] rounded hover:bg-[blue]\">Hello from AU-CSS!</div>"
+      },
+      "npm": {
+        "heading":"Using via npm",
+        "install": "npm install au-css",
+        "usage": {
+          "import": [
+            "import 'au-css/dest/index.css';",
+            "import 'au-css/js/arbitary-values.js';"
+          ],
+          "example": "<div className=\"bg-blue text-white w-[300px] rounded-full hover:scale-[1.05]\">Welcome to AU-CSS 🚀</div>"
+        }
+      }
+    },
+    "features": [
+      "Utility-first classes",
+      "Arbitrary value support",
+      "Hover effects for arbitrary utilities",
+      "Background utilities",
+      "Outline utilities",
+      "Text transform utilities",
+      "Line height utilities",
+      "Letter spacing utilities",
+      "Card UI utility classes",
+      "Real-time DOM watching with MutationObserver",
+      "Responsive utility compatibility",
+      "Extended arbitrary value support",
+      "CDN & NPM support",
+      "Small, customizable, and extendable"
+    ],
+    "customClassSupport": {
+      "supportedUtilities": [
+        "p-[value]",
+        "m-[value]",
+        "w-[value]",
+        "h-[value]",
+        "hover:bg-[value]",
+        "hover:scale-[value]",
+        "outline-[value]",
+        "outline-offset-[value]",
+        "leading-[value]",
+        "tracking-[value]",
+        "gap-[value]",
+        "rotate-[value]"
+      ],
+      "examples": [
+        "p-[50px]",
+        "w-[70%]",
+        "m-[1rem]",
+        "hover:bg-[#ff5500]",
+        "hover:scale-[1.1]",
+        "outline-[blue]",
+        "outline-offset-[3px]",
+        "leading-[1.5]",
+        "tracking-[0.1em]"
+      ]
+    },
+    "textUtilities": [
+      "uppercase",
+      "lowercase",
+      "capitalize",
+      "normal-case",
+      "leading-tight",
+      "leading-normal",
+      "leading-[2.5]",
+      "tracking-tight",
+      "tracking-wide",
+      "tracking-[0.05em]"
+    ],
+    "backgroundUtilities": [
+      "bg-cover",
+      "bg-contain",
+      "bg-center",
+      "bg-top",
+      "bg-bottom",
+      "bg-no-repeat",
+      "bg-repeat-x",
+      "bg-repeat-y"
+    ],
+    "cardComponentExample": "<div class=\"card w-[300px] card-hover\">\n  <div class=\"card-image\">\n    <img src=\"image.jpg\" alt=\"Card image\">\n  </div>\n  <div class=\"p-4\">\n    <h3 class=\"text-lg\">Card Title</h3>\n    <p>Card content goes here</p>\n  </div>\n</div>",
+    "responsiveDesign": [
+      "sm:text-center",
+      "md:w-[50%]",
+      "lg:flex"
+    ],
+    "cdnLinks": [
+      "https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css",
+      "https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js"
+    ],
+    "license": "MIT",
+    "contribute": {
+      "instructions": [
+        "git clone https://github.com/ajaymehra8/au-css.git",
+        "npm install",
+        "npm run build"
+      ]
+    }
+  }
+  
