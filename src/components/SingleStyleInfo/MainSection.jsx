@@ -10,7 +10,7 @@ const MainSection = ({ details }) => {
     setTimeout(() => setCopy(false), 2000);
   };
   return (
-    <div className="min-h-screen bg-[#1a1a28] py-[50px] lg:px-[150px]">
+    <div className="min-h-screen bg-[#1a1a28] py-[50px] lg:px-[150px] md:px-[80px] sm:px-[50px] px-[30px]">
       <h1 className="text-white font-bold text-4xl">
         Get started with {details.title}
       </h1>
