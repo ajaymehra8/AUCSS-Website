@@ -1,17 +1,16 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import HeroSection from '../components/HeroSection/HeroSection'
+import MainPage from '../components/docs/MainPage'
 import Footer from '../components/Footer'
 
-
-function Home() {
+const Docs = () => {
   return (
     <div className='w-full min-h-screen relative'>
-      <Navbar />
-      <HeroSection/>
-      <Footer/>
-    </div>
+    <Navbar />
+    <MainPage/>
+    <Footer/>
+  </div>
   )
 }
 
-export default Home
+export default Docs
