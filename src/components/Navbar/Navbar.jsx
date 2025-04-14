@@ -1,7 +1,6 @@
 import { Blocks, Code2, Sparkles, Zap } from "lucide-react";
 import React from "react";
-import { BiMoon } from "react-icons/bi";
-import { FaGithubAlt } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 function Navbar() {

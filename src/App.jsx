@@ -5,10 +5,12 @@ import SingleStyle from './pages/SingleStyle.jsx';
 import ScrollToTop from './components/ScrollToTop.js'; // adjust path if needed
 import Docs from './pages/Docs.jsx';
 import Setup from './pages/Setup.jsx';
+import {Toaster} from 'react-hot-toast'
 
 function App() {
   return (
     <>
+    <Toaster/>  
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
