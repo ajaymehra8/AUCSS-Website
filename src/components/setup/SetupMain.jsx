@@ -34,13 +34,13 @@ const Setup = () => {
             <pre className="relative mt-3 bg-black/30 rounded-lg p-4 text-sm text-gray-300 font-mono cursor-pointer">
               {/* Copy Button */}
               <div className="overflow-x-auto cursor-pointer">
-
-              {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`
-              }
-               </div>
+                {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`}
+              </div>
               <button
                 onClick={async () => {
-                  await navigator.clipboard.writeText(`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`);
+                  await navigator.clipboard.writeText(
+                    `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`
+                  );
                   toast.success("Copied.");
                 }}
                 type="button"
@@ -57,14 +57,14 @@ const Setup = () => {
             <pre className="relative mt-3 bg-black/30 rounded-lg p-4 text-sm text-gray-300 font-mono cursor-pointer">
               {/* Copy Button */}
               <div className="overflow-x-auto cursor-pointer">
-
-              {`<script src="https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js"></script>`}
+                {`<script src="https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js"></script>`}
               </div>
               <button
                 onClick={async () => {
-                  await navigator.clipboard.writeText(`<script src="https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js"></script>`  );
+                  await navigator.clipboard.writeText(
+                    `<script src="https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js"></script>`
+                  );
                   toast.success("Copied.");
-
                 }}
                 type="button"
                 className="p-2 hover:bg-white/20 rounded-lg transition-all duration-200  group absolute top-[0] sm:top-[2px] right-2 cursor-pointer"
@@ -83,12 +83,12 @@ const Setup = () => {
             <p className="text-md tracking-wider mt-4">Install package:</p>
             <pre className="relative mt-3 bg-black/30 rounded-lg p-4 text-sm text-gray-300 font-mono  cursor-pointer">
               {/* Copy Button */}
-              <div className="overflow-x-auto cursor-pointer">
-
-              npm i au-css
-              </div>
+              <div className="overflow-x-auto cursor-pointer">npm i au-css</div>
               <button
-                onClick={() => { }}
+                onClick={async () => {
+                  await navigator.clipboard.writeText(`npm i au-css`);
+                  toast.success("Copied.");
+                }}
                 type="button"
                 className="p-2 hover:bg-white/20 rounded-lg transition-all duration-200  group absolute top-2 right-2 cursor-pointer"
               >
@@ -108,7 +108,13 @@ const Setup = () => {
                 import 'au-css/js/arbitary-values.js'
               </code>
               <button
-                onClick={() => { }}
+                onClick={async () => {
+                  await navigator.clipboard.writeText(`
+                     import 'au-css/dest/index.css'
+                import 'au-css/js/arbitary-values.js'
+                    `);
+                  toast.success("Copied.");
+                }}
                 type="button"
                 className="p-2 hover:bg-white/20 rounded-lg transition-all duration-200  group absolute top-2 right-2 cursor-pointer"
               >

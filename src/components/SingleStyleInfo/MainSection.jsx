@@ -39,7 +39,7 @@ const MainSection = ({ details }) => {
 </pre>
 
       <div className="w-full py-5 flex flex-col gap-[40px] mt-[40px]">
-        {details.extraInfo.map((info) => (
+        {details.extraInfo?.map((info) => (
           <InfoCard info={info} />
         ))}
       </div>
