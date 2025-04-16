@@ -32,19 +32,19 @@ export default [
     shortcut: "display",
     briefDescription:
       "The display utilities in AU CSS are used to control how an element is displayed in the document layout. These utilities define the behavior of elements — whether they behave like a block, inline element, flex container, grid container, or are hidden entirely.",
-    code: '<div class="block md:flex">Responsive layout</div>',
+    code: '<div class="flex">Responsive layout</div>',
     extraInfo: [
       {
         title: "Grid",
         shortcut: "grid",
         description: "Use `grid` to enable CSS Grid layout.",
         code: `<div class="grid grid-cols-3 gap-4 p-4">
-  <div class="bg-blue h-32 flex items-center justify-center">Box 1</div>
-  <div class="bg-blue h-32 flex items-center justify-center">Box 2</div>
-  <div class="bg-blue h-32 flex items-center justify-center">Box 3</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 4</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 5</div>
-  <div class="bg-green h-32 flex items-center justify-center">Box 6</div>
+  <div class="bg-blue h-[100px] flex items-center justify-center">Box 1</div>
+  <div class="bg-blue h-[100px] flex items-center justify-center">Box 2</div>
+  <div class="bg-blue h-[100px] flex items-center justify-center">Box 3</div>
+  <div class="bg-green h-[100px] flex items-center justify-center">Box 4</div>
+  <div class="bg-green h-[100px] flex items-center justify-center">Box 5</div>
+  <div class="bg-green h-[100px] flex items-center justify-center">Box 6</div>
 </div>`,
       },
       {
@@ -112,7 +112,7 @@ export default [
       <img src="https://images.pexels.com/photos/669502/pexels-photo-669502.jpeg?cs=srgb&dl=pexels-goumbik-669502.jpg&fm=jpg" alt="Card Image" class="card-image"/>
       <div class="card-body p-3">
         <h2 class="text-[20px] m-2">Card Title</h2>
-        <p class="text-[14px] text-[#444]">This card has an image as well!</p>
+        <p class="text-[14px] text-color-[#444]">This card has an image as well!</p>
       </div>
     </div>
     `,
@@ -269,8 +269,8 @@ export default [
         title: "Margin Y (Top & Bottom)",
         shortcut: "my",
         description:
-          "`my` applies margin to both top and bottom. Example: `my-8`.",
-        code: '<div class="my-8">Vertical spacing</div>',
+          "`my` applies margin to both top and bottom. Example: `my-5`.",
+        code: '<div class="my-5">Vertical spacing</div>',
       },
     ],
   },
@@ -383,13 +383,13 @@ export default [
     shortcut: "bg",
     briefDescription:
       "The background utilities in AU CSS allow you to control the background appearance of elements. This includes background color, image, position, size, repeat behavior, attachment, blend mode, origin, clip, and gradient direction. These utilities provide a flexible way to style elements and enhance the visual aesthetics of your design.",
-    code: '<div class="bg-blue p-8">Background color example</div>',
+    code: '<div class="bg-blue p-5">Background color example</div>',
     extraInfo: [
       {
         title: "Background Color",
         shortcut: "bg-[color]",
         description:
-          "Use `bg-[color]` to set the background color. Example: `bg-blue-500`, `bg-gray-200`.",
+          "Use `bg-[color]` to set the background color. Example: `bg-blue`, `bg-red`.",
         code: '<div class="bg-[cyan] w-screen h-screen">Cyan background</div>',
       },
       {
@@ -471,8 +471,8 @@ export default [
         title: "Z-Index",
         shortcut: "z-[index]",
         description:
-          "Control the stacking order of elements using `z-[index]`. Example: `z-10`.",
-        code: '<div class="z-10">Z-index control</div>',
+          "Control the stacking order of elements using `z-[index]`. Example: `z-5`.",
+        code: '<div class="z-5">Z-index control</div>',
       },
       {
         title: "Top Position",
@@ -712,10 +712,10 @@ export default [
     extraInfo: [
       {
         title: "Text Color",
-        shortcut: "text-[color]",
+        shortcut: "text-color-[color]",
         description:
-          "Use `text-[color]` to set the color of the text. You can use predefined colors like `red-500` or custom colors with hex, RGB, or other formats.",
-        code: '<div class="text-blue">Blue Text</div>',
+          "Use `text-color-[color]` to set the color of the text. You can use predefined colors like `red-500` or custom colors with hex, RGB, or other formats.",
+        code: '<div class="text-color-[cyan]">Cyan Text</div>',
       },
 
       {

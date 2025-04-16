@@ -5,9 +5,8 @@
     "installation": {
       "cdn": {
         "heading":"Using via CDN",
-        "css": "https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css",
-        "js": "https://cdn.jsdelivr.net/npm/au-css@latest/js/arbitary-values.js",
-        "example": "<div class=\"bg-red text-white p-[40px] rounded hover:bg-[blue]\">Hello from AU-CSS!</div>"
+        "css": "https://cdn.jsdelivr.net/npm/au-css@1.2.3/dest/index.css",
+        "js": "https://cdn.jsdelivr.net/npm/au-css@1.2.3/js/arbitary-values.js"
       },
       "npm": {
         "heading":"Using via npm",
