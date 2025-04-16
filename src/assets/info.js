@@ -141,6 +141,7 @@ export default [
         code: `<script src="https://cdn.jsdelivr.net/npm/au-css@latest/js/toast.js"></script>
 `,
       },
+      
       {
         title: "Using Via npm",
         shortcut: "",
@@ -149,6 +150,17 @@ export default [
         code: `
   import {toast} from "au-css/js/toast.js";
 `,
+      },
+      {
+        title:"Usage:",
+        shortcut:"In HTML",
+        description:"Example code for using in HTML",
+        code:` <button
+      onclick='toast({type: "success", title: "hurray"})'
+      class="border-none bg-gray-200 text-black cursor-pointer"
+    >
+      click me
+    </button>`
       },
       {
         title: "Usage:",
