@@ -34,12 +34,12 @@ const Setup = () => {
             <pre className="relative mt-3 bg-black/30 rounded-lg p-4 text-sm text-gray-300 font-mono cursor-pointer">
               {/* Copy Button */}
               <div className="overflow-x-auto cursor-pointer">
-                {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`}
+                {`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@1.2.3/dest/index.css" />`}
               </div>
               <button
                 onClick={async () => {
                   await navigator.clipboard.writeText(
-                    `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@latest/dest/index.css" />`
+                    `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/au-css@1.2.3/dest/index.css" />`
                   );
                   toast.success("Copied.");
                 }}
